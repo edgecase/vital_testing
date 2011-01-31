@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vital Testing Projects</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Project descriptions for the EdgeCase Vital Testing workshop." />
+    <link rel="stylesheet" type="text/css" href="stylesheets/projects.css" media="all" />
+  </head>
+  <body>
+    <h1>Vital Testing Projects</h1>
+    <div id="projects">
+      <ul id="project-names">
+        <li class="project"><a href="#triangle-classification">Triangle Classification</a></li>
+        <li class="project"><a href="#bowling-kata">Bowling Kata</a></li>
+        <li class="project"><a href="#roman-numeral-calculator">Roman Numeral Calculator</a></li>
+        <li class="project"><a href="#codebreaker-kata">Codebreaker Kata</a></li>
+        <li class="project"><a href="#greed-scoring">Greed Scoring</a></li>
+        <li class="project"><a href="#sudoku-solver">Sudoku Solver</a></li>
+      </ul>
+      <div id="project-descriptions">
+        <div class="description" id="triangle-classification">
+          <h2>Triangle Classification</h2>
+          <p>
+            A triangle can be classified across a few dimensions, one of which is based on
+            the lengths of its sides.
+          </p>
+          <p>
+            A triangle is <strong>scalene</strong> if all of its three sides are different.
+          </p>
+          <p>
+            If two of its sides are equal, a triangle is called <strong>isosceles</strong>.
+          </p>
+          <p>
+            A triangle with all three equal sides is called <strong>equilateral</strong>.
+          </p>
+          <h3>Requirements</h3>
+          <p>
+            Create a class "TriangleClassifier" with the following method:
+          </p>
+          <dl>
+            <dt>classify(len1, len2, len3)</dt>
+            <dd>This method accepts three numeric values each representing
+              the length of one side of a triangle. It returns a symbol,
+              :scalene, :isosceles, or :equilateral, where the return value
+              corresponds to the actual type of the triangle.
+            </dd>
+          </dl>
+          <p>
+            In addition, the classify method should perform error checking if the given
+            lengths of the sides cannot correspond to a real triangle. In this case, it
+            should return the symbol :error.
+          </p>
+        </div>
+
+        <div class="description" id="bowling-kata">
+          <h2>Bowling Kata</h2>
+          <p class="notice">
+            The following description of the Bowling Kata is taken from Uncle Bob Martin's
+            original description of the kata, available
+            <a href="http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata">at his site</a>.
+          </p>
+          <p>
+            A game of bowling consists of 10 frames. In each frame the player has
+            two opportunities to knock down 10 pins. The score for the frame is the total
+            number of pins knocked down, plus bonuses for strikes and spares.
+          </p>
+          <p>
+            A spare is when the player knocks down all 10 pins in two tries. The bonus for
+            that frame is the number of pins knocked down by the next roll. So in frame 3
+            above, the score is 10 (the total number knocked down) plus a bonus of 5 (the
+            number of pins knocked down on the next roll.)
+          </p>
+          <p>
+            A strike is when the player knocks down all 10 pins on his first try. The bonus
+            for that frame is the value of the next two balls rolled.
+          </p>
+          <p>
+            In the tenth frame a player who rolls a spare or strike is allowed to roll the extra
+            balls to complete the frame. However no more than three balls can be rolled in
+            tenth frame.
+          </p>
+          <h3>Requirements</h3>
+          <p>
+            Write a class named “Game” that has two methods:
+          </p>
+          <dl>
+            <dt>roll(number_of_pins)</dt>
+            <dd>This method is called each time the player rolls a ball.
+                The argument is the number of pins knocked down.</dd>
+            <dt>score()</dt>
+            <dd>This method is called only at the very end of the game.
+                It returns the total score for that game.</dd>
+          </dl>
+        </div>
+
+        <div class="description" id="roman-numeral-calculator">
+          <h2>Roman Numeral Calculator</h2>
+          <p class="notice">
+            The Roman Numeral Calculator problem in this form was originally laid
+            out as part of the Ruby Quiz series. See the original problem
+            <a href="http://www.rubyquiz.com/quiz22.html">Ruby Quiz 22</a>.
+          </p>
+          <p>
+            The goal of this exercise is to create a a utility that accepts an integer
+            (between 1 and 3999) expressed as an Arabic or Roman numeral and returns the
+            same value in the opposite format.
+          </p>
+          <p>
+            For example, the following sequence of inputs:
+          </p>
+          <pre>
+          III
+          29
+          38
+          CCXCI
+          1999
+          </pre>
+          <p>would yield the following outputs:</p>
+          <pre>
+          3
+          XXIX
+          XXXVIII
+          291
+          MCMXCIX
+          </pre>
+          <p>
+            If you're not familiar with or need a refresher on Roman numerals, the rules are
+            fairly straightforward. First, there are seven letters associated with seven values:
+          </p>
+          <pre>
+          I = 1
+          V = 5
+          X = 10
+          L = 50
+          C = 100
+          D = 500
+          M = 1000
+          </pre>
+          <p>
+            You can combine letters to add values, by listing them largest to smallest from left to right:
+          </p>
+          <pre>
+          II is 2
+          VIII is 8
+          XXXI is 31
+          </pre>
+          <p>
+            However, you may only list three consecutive identical letters. That requires a special
+            rule to express numbers like 4 and 900. That rule is that a single lower value may proceed
+            a larger value, to indicate subtraction. This rule is only used to build values not
+            reachable by the previous rules:
+          </p>
+          <pre>
+          IV is 4
+          CM is 900
+          </pre>
+          <p>But 15 is XV, not XVX.</p>
+          <h3>Requirements</h3>
+          <p>
+            Create a class "RomanNumeralCalculator" with the following method:
+          </p>
+          <dl>
+            <dt>calculate(number)</dt>
+            <dd>This method accepts a singlue numeric (integral) value
+              in either Arabic or Roman Numeral format and returns the same
+              value in the opposite format. The method should return valid
+              results for input ranging from 0 to (at least) 3999.
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
