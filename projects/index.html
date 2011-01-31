@@ -161,13 +161,138 @@
           </p>
           <dl>
             <dt>calculate(number)</dt>
-            <dd>This method accepts a singlue numeric (integral) value
+            <dd>This method accepts a single numeric (integral) value
               in either Arabic or Roman Numeral format and returns the same
               value in the opposite format. The method should return valid
               results for input ranging from 0 to (at least) 3999.
             </dd>
           </dl>
         </div>
+
+        <div class="description" id="code-breaker-kata">
+          <h2>Code Breaker Kata</h2>
+          <p>
+            In order to gain clearance to the super-secret area of the mad scientit's
+            lab, you must crack the security code sequence randomly generated at the
+            start of each day. The code is breakable, but you'll need to practice
+            if you're going to crack it quickly enough to not get caught.
+          </p>
+          <p>
+            The security code consists of a sequence of four colors, each element of which can
+            be one of the following: Red, Orange, Yellow, Green, Blue, Violet, Pink, or
+            Chartreuse.
+          </p>
+          <p>
+            Upon entering sequence of four colors as a guess, the system will respond by
+            indicating how many colors were correct but out of sequence and how many colors
+            were both correct and in the correct spot in the sequence.
+          </p>
+          <p>
+            For example, if the correct sequence of colors is RGBP, and the guess is GYBO then
+            then response will indicate that one color was guessed correctly but out of place (G)
+            and one color was guessed correctly and in the correct spot (B)..
+          </p>
+          <p>
+            This repeats until
+            the full sequence has been entered correctly or the evil scientist discovers you and&hellip;
+            deals with you.
+          </p>
+          <p>See an <a href="http://www.echalk.co.uk/Maths/PrimaryNationalStrategy_Yr6/DfES-MathsActivitiesforyear6/code.html">online example here</a>.</p>
+          <h3>Requirements</h3>
+          <p>
+            Create a class "CodeBreakerSimulator" with the following method:
+          </p>
+          <dl>
+            <dt>evaluate_guess(colors)</dt>
+            <dd>This method accepts a sequence of four colors and returns
+              a collection indicating the number of correct colors (indicated
+              by :color) and the number of correct colors in the correct place
+              (indicated by :place). These sets are mutually exclusive, so one
+              correct color in the correct place should result in [:place]
+              being returned, not [:color, :place]
+            </dd>
+          </dl>
+          <p>
+            This simulator should be able to help you practice your color sequence cracking
+            and hopefully avoid being caught in a mad scientist's lair! Good luck, we're all
+            counting on you.
+          </p>
+        </div>
+
+        <div class="description" id="greed-scoring">
+          <h2>Greed Scoring</h2>
+          <p class="notice">
+            The following description of the rules of Greed is taken from
+            the Wikipedia article here: <a href="http://en.wikipedia.org/wiki/Greed_%28dice_game%29">Greed Scoring</a>.
+          </p>
+          <p>
+            Greed is a dice game with complex scoring rules. The first player to have
+            scored 10,000 or more points at the end of their turn wins.
+          </p>
+          <p>
+            A turn involves one or more throws of the dice.
+          </p>
+          <p>
+            When a player begins a turn, he throws all six dice. He then scores points for
+            the turn (cumulatively) as per scoring below. If he fails to score any points
+            on any given throw, he receives no points for his turn, his turn ends, and
+            play passes to the person on his left. After each throw, the player sets aside
+            any of the dice that scored points, and he may either continue to throw the
+            rest of the dice or end his turn and take his points. The player then continues
+            to throw all remaining non-scoring dice until:
+          </p>
+          <ol>
+            <li>No points are scored on a throw</li>
+            <li>The player decides to keep his score for the turn</li>
+          <ol>
+          <p>
+          In addition, if a player scores with all six dice over the course of his turn,
+          he may continue rolling, starting again with six dice.
+          </p>
+          <p>
+            In order to enter the game, a player must achieve 1000 points in one turn (not throw).
+          </p>
+
+          <table cellspacing="0" cellpadding="0">
+            <thead>
+              <tr><td>Dice</td><td>Scores</td></tr>
+            </thead>
+            <tbody>
+              <tr><td>a single 1</td><td>100</td></tr>
+              <tr><td>a single 5</td><td>50</td></tr>
+              <tr><td>triple of 1's (1,1,1)</td><td>1,000</td></tr>
+              <tr><td>triple of 2's (2,2,2)</td><td>200</td></tr>
+              <tr><td>triple of 3's (3,3,3)</td><td>300</td></tr>
+              <tr><td>triple of 4's (4,4,4)</td><td>400</td></tr>
+              <tr><td>triple of 5's (5,5,5)</td><td>500</td></tr>
+              <tr><td>triple of 6's (6,6,6)</td><td>600</td></tr>
+              <tr><td>four-of-a-kind (2,2,2,2)</td><td>Multiply triple score by 2</td></tr>
+              <tr><td>five-of-a-kind (3,3,3,3,3)</td><td>Multiply triple score by 4</td></tr>
+              <tr><td>six-of-a-kind (4,4,4,4,4,4)</td><td>Multiply triple score by 8</td></tr>
+              <tr><td>three pairs (2,2,3,3,4,4)</td><td>800</td></tr>
+              <tr><td>straight (1,2,3,4,5,6)</td><td>1,200</td></tr>
+            </tbody>
+          </table>
+          <p>
+            If you set aside a triple of 5's, then rolled a single 5, you could not claim a
+            four-of-a-kind. You could merely claim one triple of 5's, and one single 5. Your
+            score would be 500 + 50 = 550.
+          </p>
+          <p>
+            When rolling 4 or greater of a kind, each additional kind that is matched doubles
+            your score. So if you rolled five 4's, your score would be 400 for the first 3.
+            Then double that for the fourth, making it 800, then double again to make it 1600
+            points. 400x2x2 = 1600.
+          </p>
+          <h3>Requirements</h3>
+          <p>
+            Create a tracker for a Greed game sequence. This is an open-ended problem. You
+            may choose to focus on scoring individual throws, combining throws into rounds,
+            tracking multiple players, or whatever palatable and interesting portion of the
+            solution you choose.
+          </p>
+        </div>
+
       </div>
     </div>
   </body>
