@@ -1,0 +1,57 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+a { text-decoration: none; }
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #666;
+}
+
+body h1 {
+  text-align: center;
+}
+
+ul#project-names {
+  list-style: none;
+  width: 100%;
+}
+
+ul#project-names li {
+  list-style: none;
+  display: inline;
+  padding: 3px 3px;
+  background-color: #888;
+}
+
+ul#project-names li.selected {
+  background-color: #222;
+}
+
+ul#project-names li.selected a {
+  color: white;
+}
+
+#project-descriptions {
+  margin: 0 0 30px 0;
+}
+
+.description {
+  background-color: white;
+  padding: 20px;
+  display: none;
+}
+
+.description h2 {
+  text-align: center;
+}
+
+dt {
+  font-family: Menlo, monospace;
+}
+
+span.symbol, span.code {
+  font-family: Menlo, monospace;
+}

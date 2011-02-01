@@ -5,12 +5,14 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="Project descriptions for the EdgeCase Vital Testing workshop." />
     <link rel="stylesheet" type="text/css" href="stylesheets/projects.css" media="all" />
+    <script type="text/javascript" src="javascripts/jquery.js"></script>
+    <script type="text/javascript" src="javascripts/projects.js"></script>
   </head>
   <body>
     <h1>Vital Testing Projects</h1>
     <div id="projects">
       <ul id="project-names">
-        <li class="project"><a href="#triangle-classification">Triangle Classification</a></li>
+        <li class="project selected"><a href="#triangle-classification">Triangle Classification</a></li>
         <li class="project"><a href="#bowling-kata">Bowling Kata</a></li>
         <li class="project"><a href="#roman-numeral-calculator">Roman Numeral Calculator</a></li>
         <li class="project"><a href="#codebreaker-kata">Codebreaker Kata</a></li>
@@ -35,20 +37,21 @@
           </p>
           <h3>Requirements</h3>
           <p>
-            Create a class "TriangleClassifier" with the following method:
+            Create a class <span class="code">TriangleClassifier</span> with the following method:
           </p>
           <dl>
             <dt>classify(len1, len2, len3)</dt>
             <dd>This method accepts three numeric values each representing
               the length of one side of a triangle. It returns a symbol,
-              :scalene, :isosceles, or :equilateral, where the return value
+              <span class="symbol">:scalene</span>, <span class="symbol">:isosceles</span>,
+              or <span class="symbol">:equilateral</span>, where the return value
               corresponds to the actual type of the triangle.
             </dd>
           </dl>
           <p>
             In addition, the classify method should perform error checking if the given
             lengths of the sides cannot correspond to a real triangle. In this case, it
-            should return the symbol :error.
+            should return the symbol <span class="symbol">:error</span>.
           </p>
         </div>
 
@@ -81,7 +84,7 @@
           </p>
           <h3>Requirements</h3>
           <p>
-            Write a class named “Game” that has two methods:
+            Write a class named <span class="code">Game</span> that has two methods:
           </p>
           <dl>
             <dt>roll(number_of_pins)</dt>
@@ -157,7 +160,7 @@
           <p>But 15 is XV, not XVX.</p>
           <h3>Requirements</h3>
           <p>
-            Create a class "RomanNumeralCalculator" with the following method:
+            Create a class <span class="code">RomanNumeralCalculator</span> with the following method:
           </p>
           <dl>
             <dt>calculate(number)</dt>
@@ -169,7 +172,7 @@
           </dl>
         </div>
 
-        <div class="description" id="code-breaker-kata">
+        <div class="description" id="codebreaker-kata">
           <h2>Code Breaker Kata</h2>
           <p>
             In order to gain clearance to the super-secret area of the mad scientit's
@@ -200,16 +203,16 @@
           <p>See an <a href="http://www.echalk.co.uk/Maths/PrimaryNationalStrategy_Yr6/DfES-MathsActivitiesforyear6/code.html">online example here</a>.</p>
           <h3>Requirements</h3>
           <p>
-            Create a class "CodeBreakerSimulator" with the following method:
+            Create a class <span class="code">CodeBreakerSimulator</span> with the following method:
           </p>
           <dl>
             <dt>evaluate_guess(colors)</dt>
             <dd>This method accepts a sequence of four colors and returns
               a collection indicating the number of correct colors (indicated
-              by :color) and the number of correct colors in the correct place
-              (indicated by :place). These sets are mutually exclusive, so one
-              correct color in the correct place should result in [:place]
-              being returned, not [:color, :place]
+              by <span class="symbol">:color</span>) and the number of correct colors in the correct place
+              (indicated by <span class="symbol">:place</span>). These sets are mutually exclusive, so one
+              correct color in the correct place should result in [<span class="symbol">:place</span>]
+              being returned, not [<span class="symbol">:color</span>, <span class="symbol">:place</span>]
             </dd>
           </dl>
           <p>
@@ -244,7 +247,7 @@
           <ol>
             <li>No points are scored on a throw</li>
             <li>The player decides to keep his score for the turn</li>
-          <ol>
+          </ol>
           <p>
           In addition, if a player scores with all six dice over the course of his turn,
           he may continue rolling, starting again with six dice.
