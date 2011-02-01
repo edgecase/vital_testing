@@ -9,16 +9,17 @@ body {
 body h1 {
   text-align: center;
   margin: 0;
-  padding: 10px 0 16px 10px;
+  padding: 10px 0 10px 0;
   color: white;
   font-weight: normal;
+  font-size: 48px;
   background-color: #333;
 }
 
 #projects {
   width: 860px;
   min-height: 800px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   background-color: #fff;
 }
 
@@ -27,14 +28,14 @@ ul#project-names {
   width: 100%;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 6px 0 0 0;
   letter-spacing: -5px;
 }
 
 ul#project-names li {
   list-style: none;
   display: inline;
-  padding: 3px 8px;
+  padding: 6px 8px;
   margin: 0;
   background-color: #333;
   letter-spacing: normal;
@@ -70,20 +71,18 @@ ul#project-names li.selected:hover {
 }
 
 ul#project-names li.selected a {
+  cursor: default;
   color: #ccc;
 }
 
-#project-descriptions {
-  margin: 0 0 30px 0;
-}
-
 .description {
-  padding: 20px 40px 0 40px;
+  padding: 20px 40px 20px 40px;
   display: none;
 }
 
 .description h2 {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .description a {
@@ -103,8 +102,7 @@ ul#project-names li.selected a {
 }
 
 .description table {
-  width: 45%;
-  margin 0 auto;
+  width: 48%;
   border: solid 1px black ;
   text-align: center;
 }
@@ -121,8 +119,19 @@ ul#project-names li.selected a {
   padding: 2px;
 }
 
-dt {
+.description pre {
+  margin: 16px 40px 16px 40px;
+  padding: 10px 0 10px 0;
+  background-color: #eda;
+}
+
+.description dt {
   font-family: Menlo, monospace;
+  margin: 12px 0 12px 0;
+}
+
+.description dd {
+  font-size: 0.95em;
 }
 
 span.symbol, span.code {
