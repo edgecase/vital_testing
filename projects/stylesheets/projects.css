@@ -1,23 +1,25 @@
 body {
   font-family: Helvetica, sans-serif;
-  background-color: #333;
+  background-color: #fefefe;
   padding: 0;
   margin: 0;
+  background-color: #eee;
 }
 
 body h1 {
   text-align: center;
-  margin: 0 0 50px 0;
-  padding: 10px 0 10px;
+  margin: 0;
+  padding: 10px 0 16px 10px;
   color: white;
   font-weight: normal;
-  background-color: black;
+  background-color: #333;
 }
 
 #projects {
   width: 860px;
   min-height: 800px;
   margin: 0 auto;
+  background-color: #fff;
 }
 
 ul#project-names {
@@ -25,18 +27,29 @@ ul#project-names {
   width: 100%;
   text-align: center;
   margin: 0;
-  padding: 3px 3px;
-  letter-spacing: -1em;
+  padding: 0;
+  letter-spacing: -5px;
 }
 
 ul#project-names li {
   list-style: none;
   display: inline;
-  padding: 3px 5px;
-  margin: 0 0;
-  background-color: #222;
-  border: solid white 1px;
+  padding: 3px 8px;
+  margin: 0;
+  background-color: #333;
   letter-spacing: normal;
+}
+
+ul#project-names li:first-child {
+  -moz-border-radius-bottomleft: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+ul#project-names li:last-child {
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 ul#project-names li a {
@@ -48,12 +61,16 @@ ul#project-names li a:focus {
   outline: 0px;
 }
 
-ul#project-names li.selected {
+ul#project-names li:hover {
   background-color: #888;
 }
 
+ul#project-names li.selected:hover {
+  background-color: #333;
+}
+
 ul#project-names li.selected a {
-  color: #000;
+  color: #ccc;
 }
 
 #project-descriptions {
@@ -61,8 +78,7 @@ ul#project-names li.selected a {
 }
 
 .description {
-  background-color: #eee;
-  padding: 20px;
+  padding: 20px 40px 0 40px;
   display: none;
 }
 
@@ -73,6 +89,12 @@ ul#project-names li.selected a {
 .description a {
   color: #444;
   font-weight: bold;
+}
+
+.description p.notice {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
 }
 
 .description a:visited {
