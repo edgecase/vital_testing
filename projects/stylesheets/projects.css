@@ -134,6 +134,13 @@ ul#project-names li.selected a {
   font-size: 0.95em;
 }
 
+.description#sudoku-solver img#sudoku-sample {
+  float: right;
+  width:  250px;
+  height: 250px;
+  margin: 20px 20px 20px 20px;
+}
+
 span.symbol, span.code {
   font-family: Menlo, monospace;
 }
