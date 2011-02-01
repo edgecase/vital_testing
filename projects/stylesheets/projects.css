@@ -3,7 +3,7 @@ body {
   background-color: #fefefe;
   padding: 0;
   margin: 0;
-  background-color: #eee;
+  background-color: #ccc;
 }
 
 body h1 {
@@ -72,7 +72,7 @@ ul#project-names li.selected:hover {
 
 ul#project-names li.selected a {
   cursor: default;
-  color: #ccc;
+  color: #888;
 }
 
 .description {
