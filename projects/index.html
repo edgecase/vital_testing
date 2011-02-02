@@ -204,12 +204,16 @@
           </p>
           <dl>
             <dt>evaluate_guess(colors)</dt>
-            <dd>This method accepts a sequence of four colors and returns
-              a collection indicating the number of correct colors (indicated
-              by <span class="symbol">:color</span>) and the number of correct colors in the correct place
-              (indicated by <span class="symbol">:place</span>). These sets are mutually exclusive, so one
-              correct color in the correct place should result in [<span class="symbol">:place</span>]
-              being returned, not [<span class="symbol">:color</span>, <span class="symbol">:place</span>]
+            <dd>This method accepts a sequence of four colors (:red
+              for Red, :orange for Orange, etc) and returns a
+              collection indicating the number of correct colors
+              (indicated by <span class="symbol">:color</span>) and
+              the number of correct colors in the correct place
+              (indicated by <span class="symbol">:place</span>). These
+              sets are mutually exclusive, so one correct color in the
+              correct place should result in
+              [<span class="symbol">:place</span>] being returned, not
+              [<span class="symbol">:color</span>, <span class="symbol">:place</span>]
             </dd>
           </dl>
           <p>
