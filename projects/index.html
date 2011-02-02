@@ -285,6 +285,28 @@
             points. 400x2x2 = 1600.
           </p>
           <h3>Requirements</h3>
+          <h4>Basic Problem</h4>
+          <p>
+            Create a class <span class="code">GreedScorer</span> with the following method:
+          </p>
+          <dl>
+            <dt>score(roll)</dt>
+            <dd>
+              <p>This method accepts a sequence of 0 to 6 dice values
+              and returns the score for that roll, according to the
+              chart above.</p>
+
+              <p>For Example</p>
+
+              <pre class="code">    scorer = GreedScorer.new
+    scorer.score([])              # returns 0 (no score)
+    scorer.score([1])             # returns 100 (100 for the 1)
+    scorer.score([3,1,2,1,6,5])   # returns 250 (200 for the two 1s + 50 for the 5)
+    scorer.score([3,3,3,3,3,2])   # returns 1200
+                                  # (300 for triple score, X4 for 5 of a kind)</pre>
+            </dd>
+          </dl>
+          <h4>Advanced Problem</h4>
           <p>
             Create a tracker for a Greed game sequence. This is an open-ended problem. You
             may choose to focus on scoring individual throws, combining throws into rounds,
