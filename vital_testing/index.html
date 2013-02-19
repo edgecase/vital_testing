@@ -16,6 +16,7 @@
       <li class="project"><a href="#roman-numeral-calculator">Roman Numeral Calculator</a></li>
       <li class="project"><a href="#codebreaker-kata">Codebreaker Kata</a></li>
       <li class="project"><a href="#greed-scoring">Greed Scoring</a></li>
+      <li class="project"><a href="#gilded-rose">The Gilded Rose</a></li>
       <li class="project"><a href="#sudoku-solver">Sudoku Solver</a></li>
     </ul>
     <div id="projects">
@@ -317,6 +318,65 @@
             tracking multiple players, or whatever palatable and interesting portion of the
             solution you choose.
           </p>
+        </div>
+        <div class="description" id="gilded-rose">
+          <h2>The Gilded Rose</h2>
+          <p>
+            Hi and welcome to team Gilded Rose. As you know, we are a
+            small inn with a prime location in a prominent city ran by
+            a friendly innkeeper named Allison. We also buy and sell
+            only the finest goods. Unfortunately, our goods are
+            constantly degrading in quality as they approach their
+            sell by date. We have a system in place that updates our
+            inventory for us. It was developed by a no-nonsense type
+            named Leeroy, who has moved on to new adventures. Your
+            task is to add the new feature to our system so that we
+            can begin selling a new category of items. First an
+            introduction to our system:
+          </p>
+          <ul>
+            <li>All items have a sell_in value which denotes the number
+            of days we have to sell the item</li>
+            <li>All items have a quality value which denotes how
+            valuable the item is</li>
+            <li>At the end of each day our system lowers both values for every item</li>
+          </ul>
+          <p>Pretty simple, right? Well this is where it gets
+          interesting:</p>
+          <ul>
+            <li>Once the sell by date has passed, Quality degrades
+            twice as fast</li>
+            <li>The Quality of an item is never negative</li>
+            <li>“Aged Brie” actually increases in Quality the older it
+            gets</li>
+            <li>The Quality of an item is never more than 50</li>
+            <li>“Sulfuras”, being a legendary item, never has to be
+            sold or decreases in Quality</li>
+            <li>“Backstage passes”, like aged brie, increases in
+            quality as it’s sell_in value approaches; quality increases
+            by 2 when there are 10 days or less and by 3 when there
+            are 5 days or less but Quality drops to 0 after the
+            concert</li>
+          </ul>
+          <p>
+            We have recently signed a supplier of conjured items. This requires an update to our system:
+          </p>
+          <ul>
+            <li>“Conjured” items degrade in Quality twice as fast as normal items</li>
+          </ul>
+          <p>Just for clarification, an item can never have its quality increase above 50, however "Sulfuras" is a legendary item and as such its quality is 80 and it never alters.</p>
+          <h3>Requirements</h3>
+          <p>
+            Construct a class <span class="code">GildedRose</span> with the
+            following method:
+          </p>
+          <dl>
+            <dt>update_qualities()</dt>
+            <dd>
+              This method should update the quality of all items in
+              the Gilded Rose store based on the rules above.
+            </dd>
+          </dl>
         </div>
 
         <div class="description" id="sudoku-solver">
