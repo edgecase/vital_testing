@@ -30,6 +30,7 @@ ul#project-names {
   margin: 0;
   padding: 6px 0 0 0;
   letter-spacing: -5px;
+  font-size: 90%;
 }
 
 ul#project-names li {
